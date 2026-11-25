@@ -1,0 +1,976 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>溏心原创vlog - 记录生活的温度 | 原创影像品牌</title>
+<meta name="description" content="溏心原创vlog 是一个专注真实生活记录的原创影像品牌，用镜头捕捉日常里流动的温柔与故事，与数万创作者共建有温度的社区。">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --yolk:#f5a623;
+  --yolk-deep:#e08a00;
+  --yolk-soft:#fff4dd;
+  --cream:#fdfaf3;
+  --ink:#1e1b16;
+  --ink-soft:#4a453c;
+  --ink-faint:#8a8275;
+  --line:#e8e1d3;
+  --card:#ffffff;
+  --shadow:0 18px 50px -22px rgba(80,60,20,.28);
+  --radius:20px;
+}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+  background:var(--cream);
+  color:var(--ink);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+h1,h2,h3,h4{line-height:1.3;font-weight:800;letter-spacing:-.01em}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+img,svg{display:block;max-width:100%}
+::selection{background:var(--yolk);color:#fff}
+.wrap{width:min(1180px,92vw);margin:0 auto}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:13px;font-weight:700;letter-spacing:.18em;
+  color:var(--yolk-deep);text-transform:uppercase;
+  padding:7px 16px;border-radius:999px;
+  background:var(--yolk-soft);border:1px solid #f7d99a;
+}
+.eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--yolk)}
+.section-head{max-width:720px;margin-bottom:52px}
+.section-head h2{font-size:clamp(28px,4vw,44px);margin:18px 0 14px}
+.section-head p{color:var(--ink-soft);font-size:16.5px}
+
+/* ============ NAV ============ */
+header.nav{
+  position:sticky;top:0;z-index:100;
+  background:rgba(253,250,243,.86);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--line);
+  transition:box-shadow .3s;
+}
+header.nav.scrolled{box-shadow:0 10px 30px -20px rgba(80,60,20,.5)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:76px}
+.logo{display:flex;align-items:center;gap:12px;font-weight:900;font-size:20px;letter-spacing:-.02em}
+.logo-mark{
+  width:42px;height:42px;border-radius:14px;
+  background:radial-gradient(circle at 34% 30%,#ffd97a,var(--yolk) 55%,var(--yolk-deep));
+  display:grid;place-items:center;color:#fff;
+  box-shadow:0 8px 20px -8px rgba(224,138,0,.85);
+}
+.logo-mark svg{width:22px;height:22px}
+.logo small{display:block;font-size:11px;font-weight:600;letter-spacing:.24em;color:var(--ink-faint);line-height:1}
+nav.menu{display:flex;gap:6px}
+nav.menu a{
+  padding:9px 16px;border-radius:10px;font-size:14.5px;font-weight:600;
+  color:var(--ink-soft);transition:.22s;
+}
+nav.menu a:hover{color:var(--yolk-deep);background:var(--yolk-soft)}
+.nav-cta{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--ink);color:#fff;font-weight:700;font-size:14.5px;
+  padding:11px 22px;border-radius:12px;transition:.25s;
+}
+.nav-cta:hover{background:var(--yolk-deep);transform:translateY(-1px)}
+.burger{display:none;width:44px;height:44px;border:1px solid var(--line);border-radius:12px;background:#fff;cursor:pointer;place-items:center}
+.burger span{display:block;width:18px;height:2px;background:var(--ink);margin:3px 0;border-radius:2px}
+
+/* ============ HERO ============ */
+.hero{position:relative;padding:86px 0 90px;overflow:hidden}
+.hero::before{
+  content:"";position:absolute;width:640px;height:640px;border-radius:50%;
+  background:radial-gradient(circle,#ffe7b0 0%,rgba(255,231,176,0) 70%);
+  top:-260px;right:-180px;pointer-events:none;
+}
+.hero::after{
+  content:"";position:absolute;width:520px;height:520px;border-radius:50%;
+  background:radial-gradient(circle,#ffe7b0 0%,rgba(255,231,176,0) 70%);
+  bottom:-260px;left:-200px;opacity:.55;pointer-events:none;
+}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.08fr .92fr;gap:56px;align-items:center}
+.hero h1{
+  font-size:clamp(44px,6.4vw,78px);
+  letter-spacing:-.035em;margin:24px 0 22px;
+  background:linear-gradient(120deg,var(--ink) 30%,#6b5a2e 75%,var(--yolk-deep));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero h1 em{font-style:normal;position:relative;white-space:nowrap}
+.hero h1 em::after{
+  content:"";position:absolute;left:0;right:0;bottom:.06em;height:.16em;
+  background:linear-gradient(90deg,var(--yolk),#ffd97a);
+  border-radius:6px;z-index:-1;opacity:.55;
+}
+.hero-sub{font-size:18px;color:var(--ink-soft);max-width:520px;margin-bottom:34px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:44px}
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:15px 30px;border-radius:14px;font-weight:700;font-size:16px;
+  transition:.25s;border:1px solid transparent;cursor:pointer;
+}
+.btn-primary{background:linear-gradient(135deg,var(--yolk),var(--yolk-deep));color:#fff;box-shadow:0 16px 34px -16px rgba(224,138,0,.9)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 22px 40px -16px rgba(224,138,0,.95)}
+.btn-ghost{background:#fff;border-color:var(--line);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--yolk);color:var(--yolk-deep)}
+.hero-stats{display:flex;gap:40px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:28px}
+.hero-stats b{display:block;font-size:30px;font-weight:900;letter-spacing:-.02em;color:var(--ink)}
+.hero-stats span{font-size:13.5px;color:var(--ink-faint);font-weight:600}
+
+/* hero visual */
+.hero-visual{position:relative}
+.phone{
+  position:relative;width:100%;max-width:360px;margin:0 auto;
+  aspect-ratio:9/15.5;border-radius:36px;overflow:hidden;
+  background:linear-gradient(160deg,#2b2418,#4a3c22 55%,#7a5f27);
+  border:9px solid #22201b;
+  box-shadow:0 40px 80px -34px rgba(60,40,0,.7);
+}
+.phone::before{
+  content:"";position:absolute;top:12px;left:50%;transform:translateX(-50%);
+  width:92px;height:9px;border-radius:6px;background:rgba(0,0,0,.55);z-index:4;
+}
+.phone-scene{position:absolute;inset:0;overflow:hidden}
+.sun{
+  position:absolute;width:170px;height:170px;border-radius:50%;
+  background:radial-gradient(circle,#ffe9b8,#ffcb5e 60%,#f5a623);
+  top:16%;left:50%;transform:translateX(-50%);
+  filter:blur(.4px);animation:breathe 6s ease-in-out infinite;
+}
+@keyframes breathe{0%,100%{transform:translateX(-50%) scale(1);opacity:.95}50%{transform:translateX(-50%) scale(1.06);opacity:1}}
+.hill{position:absolute;bottom:0;width:100%;height:46%;background:linear-gradient(180deg,#3f3a2a,#191610);clip-path:polygon(0 42%,18% 26%,38% 40%,56% 22%,74% 38%,100% 20%,100% 100%,0 100%)}
+.hill.b{height:34%;background:linear-gradient(180deg,#2e2a1e,#0f0d09);clip-path:polygon(0 60%,22% 44%,46% 62%,70% 40%,100% 56%,100% 100%,0 100%);opacity:.9}
+.grain{position:absolute;inset:0;opacity:.14;background-image:radial-gradient(rgba(255,255,255,.5) .7px,transparent .7px);background-size:5px 5px}
+.rec{position:absolute;top:34px;left:18px;display:flex;align-items:center;gap:7px;color:#fff;font-size:11px;font-weight:700;letter-spacing:.14em;z-index:3}
+.rec i{width:8px;height:8px;border-radius:50%;background:#ff4d4d;animation:blink 1.4s infinite}
+@keyframes blink{50%{opacity:.2}}
+.phone-cap{position:absolute;bottom:56px;left:20px;right:20px;color:#fff;z-index:3}
+.phone-cap p{font-size:12px;letter-spacing:.16em;opacity:.72;font-weight:600;margin-bottom:6px}
+.phone-cap h4{font-size:19px;font-weight:800}
+.phone-bar{position:absolute;bottom:18px;left:20px;right:20px;display:flex;align-items:center;gap:10px;z-index:3}
+.phone-bar .track{flex:1;height:3px;border-radius:3px;background:rgba(255,255,255,.28);overflow:hidden}
+.phone-bar .track i{display:block;height:100%;width:38%;background:var(--yolk);border-radius:3px;animation:play 5s linear infinite}
+@keyframes play{from{width:0}to{width:100%}}
+.float-card{
+  position:absolute;background:#fff;border-radius:16px;padding:14px 18px;
+  box-shadow:var(--shadow);border:1px solid var(--line);
+  display:flex;align-items:center;gap:12px;font-size:13.5px;font-weight:700;
+}
+.float-card .ic{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:var(--yolk-soft);color:var(--yolk-deep)}
+.float-card small{display:block;font-weight:600;color:var(--ink-faint);font-size:11.5px;letter-spacing:.04em}
+.fc1{top:8%;left:-26px;animation:floaty 5s ease-in-out infinite}
+.fc2{bottom:14%;right:-24px;animation:floaty 5s ease-in-out infinite .8s}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+
+/* ============ TRUST BAR ============ */
+.trust{border-block:1px solid var(--line);background:#fff}
+.trust-inner{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:26px 0;flex-wrap:wrap}
+.trust-label{font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--ink-faint);text-transform:uppercase}
+.partners{display:flex;gap:38px;flex-wrap:wrap;align-items:center}
+.partners span{font-size:16px;font-weight:800;color:#b7ae9d;letter-spacing:.02em;transition:.3s}
+.partners span:hover{color:var(--yolk-deep)}
+
+/* ============ STORY ============ */
+.story{padding:100px 0}
+.story-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:60px;align-items:center}
+.story-art{position:relative;border-radius:26px;overflow:hidden;aspect-ratio:4/4.4;background:linear-gradient(160deg,#3c3320,#6b5626 60%,#a9832f);box-shadow:var(--shadow)}
+.story-art .lay{position:absolute;inset:0}
+.story-art .lens{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:46%;aspect-ratio:1;border-radius:50%;border:2px dashed rgba(255,255,255,.35);display:grid;place-items:center}
+.story-art .lens::before{content:"";width:62%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 36% 32%,#fff6dd,#ffce6a 45%,#e08a00);box-shadow:0 0 60px rgba(255,206,106,.55)}
+.story-art .lines{position:absolute;inset:0;background:repeating-linear-gradient(115deg,rgba(255,255,255,.16) 0 1px,transparent 1px 22px);opacity:.5}
+.story-badge{position:absolute;bottom:22px;left:22px;right:22px;background:rgba(255,255,255,.94);border-radius:16px;padding:16px 18px;display:flex;gap:14px;align-items:center;backdrop-filter:blur(6px)}
+.story-badge .dot{width:40px;height:40px;flex:0 0 auto;border-radius:50%;background:linear-gradient(135deg,var(--yolk),var(--yolk-deep));display:grid;place-items:center;color:#fff}
+.story-badge b{font-size:14.5px;display:block}
+.story-badge small{font-size:12px;color:var(--ink-faint);font-weight:600}
+.story-text h2{font-size:clamp(28px,3.6vw,42px);margin-bottom:22px}
+.story-text p{color:var(--ink-soft);margin-bottom:16px;font-size:16px}
+.story-list{margin-top:28px;display:grid;gap:16px}
+.story-list li{display:flex;gap:14px;align-items:flex-start}
+.story-list .tick{flex:0 0 auto;width:26px;height:26px;border-radius:8px;background:var(--yolk-soft);color:var(--yolk-deep);display:grid;place-items:center;font-size:14px;font-weight:900;margin-top:2px}
+.story-list b{font-size:15.5px;display:block;margin-bottom:2px}
+.story-list span{font-size:14px;color:var(--ink-faint)}
+
+/* ============ WORKS ============ */
+.works{padding:100px 0;background:linear-gradient(180deg,#fff * ,#fff)}
+.works-bg{background:#fff;border-block:1px solid var(--line)}
+.works{padding:100px 0}
+.works-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;margin-bottom:48px}
+.works-head .section-head{margin-bottom:0}
+.filters{display:flex;gap:8px;flex-wrap:wrap}
+.filters button{
+  border:1px solid var(--line);background:#fff;color:var(--ink-soft);
+  padding:9px 18px;border-radius:999px;font-size:13.5px;font-weight:700;cursor:pointer;transition:.22s;
+}
+.filters button:hover{border-color:var(--yolk);color:var(--yolk-deep)}
+.filters button.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+.work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.work-card{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;transition:.3s;display:flex;flex-direction:column;
+}
+.work-card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:#f3dca6}
+.work-thumb{position:relative;aspect-ratio:16/10;overflow:hidden;display:grid;place-items:center}
+.work-thumb .play{
+  width:56px;height:56px;border-radius:50%;background:rgba(255,255,255,.92);
+  display:grid;place-items:center;color:var(--ink);z-index:2;
+  box-shadow:0 8px 22px -8px rgba(0,0,0,.4);transition:.3s;
+}
+.work-card:hover .play{transform:scale(1.1);background:var(--yolk);color:#fff}
+.work-thumb .dur{
+  position:absolute;bottom:12px;right:12px;background:rgba(0,0,0,.6);color:#fff;
+  font-size:11.5px;font-weight:700;padding:3px 9px;border-radius:6px;z-index:2;letter-spacing:.04em;
+}
+.work-thumb .tag{
+  position:absolute;top:12px;left:12px;background:rgba(255,255,255,.92);color:var(--ink);
+  font-size:11.5px;font-weight:800;padding:4px 11px;border-radius:6px;z-index:2;
+}
+.wt1{background:linear-gradient(135deg,#f7e6bd,#e8c377)}
+.wt2{background:linear-gradient(135deg,#cfe0d4,#8fb79f)}
+.wt3{background:linear-gradient(135deg,#e6d6e4,#b79ab5)}
+.wt4{background:linear-gradient(135deg,#d7e2ec,#93aec5)}
+.wt5{background:linear-gradient(135deg,#f3d8c1,#dba57e)}
+.wt6{background:linear-gradient(135deg,#e3e0cf,#b3ac83)}
+.work-body{padding:22px 22px 24px;display:flex;flex-direction:column;gap:10px;flex:1}
+.work-body h3{font-size:17.5px}
+.work-body p{font-size:14px;color:var(--ink-faint);flex:1}
+.work-meta{display:flex;justify-content:space-between;align-items:center;border-top:1px dashed var(--line);padding-top:14px;margin-top:4px;font-size:12.5px;font-weight:600;color:var(--ink-faint)}
+.work-meta .who{display:flex;align-items:center;gap:8px}
+.ava{width:24px;height:24px;border-radius:50%;background:linear-gradient(135deg,#ffd97a,var(--yolk-deep));display:grid;place-items:center;font-size:10px;color:#fff;font-weight:900}
+.work-meta .likes{display:flex;align-items:center;gap:5px;color:var(--yolk-deep)}
+
+/* ============ NUMBERS ============ */
+.numbers{padding:92px 0;background:var(--ink);color:#fff;position:relative;overflow:hidden}
+.numbers::after{
+  content:"";position:absolute;width:700px;height:700px;border-radius:50%;
+  background:radial-gradient(circle,rgba(245,166,35,.22),transparent 70%);
+  top:-300px;right:-200px;
+}
+.numbers .section-head h2{color:#fff}
+.numbers .section-head p{color:#c8c0b2}
+.numbers .eyebrow{background:rgba(245,166,35,.14);border-color:rgba(245,166,35,.35);color:#ffd97a}
+.num-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;position:relative}
+.num-card{background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:30px 26px;transition:.3s}
+.num-card:hover{background:rgba(255,255,255,.1);transform:translateY(-4px)}
+.num-card b{font-size:clamp(30px,3.6vw,42px);font-weight:900;display:block;letter-spacing:-.03em;color:#ffd97a;margin-bottom:6px}
+.num-card span{font-size:14px;color:#c8c0b2;font-weight:600}
+
+/* ============ VALUES ============ */
+.values{padding:100px 0}
+.val-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.val-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:34px 30px;transition:.3s;position:relative;overflow:hidden}
+.val-card::before{content:"";position:absolute;top:0;left:0;width:100%;height:4px;background:linear-gradient(90deg,var(--yolk),transparent);transform:scaleX(0);transform-origin:left;transition:.4s}
+.val-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.val-card:hover::before{transform:scaleX(1)}
+.val-ic{width:54px;height:54px;border-radius:16px;background:var(--yolk-soft);color:var(--yolk-deep);display:grid;place-items:center;margin-bottom:22px}
+.val-card h3{font-size:19px;margin-bottom:12px}
+.val-card p{font-size:14.5px;color:var(--ink-soft)}
+
+/* ============ TEAM / CREATORS ============ */
+.creators{padding:100px 0;background:#fff;border-block:1px solid var(--line)}
+.cr-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.cr-card{text-align:center;padding:32px 20px;border-radius:var(--radius);transition:.3s;border:1px solid transparent}
+.cr-card:hover{background:var(--cream);border-color:var(--line)}
+.cr-ava{width:96px;height:96px;border-radius:50%;margin:0 auto 18px;position:relative;display:grid;place-items:center;font-size:28px;font-weight:900;color:#fff;letter-spacing:.02em}
+.cr-ava::after{content:"";position:absolute;inset:-5px;border-radius:50%;border:2px dashed #f0d79c}
+.ca1{background:linear-gradient(135deg,#f5a623,#e07a00)}
+.ca2{background:linear-gradient(135deg,#7ab893,#3f7a58)}
+.ca3{background:linear-gradient(135deg,#8aa8cf,#4c6d99)}
+.ca4{background:linear-gradient(135deg,#c491b8,#8a5a7d)}
+.cr-card h3{font-size:17px;margin-bottom:4px}
+.cr-card .role{font-size:12.5px;color:var(--yolk-deep);font-weight:700;letter-spacing:.06em;margin-bottom:10px}
+.cr-card p{font-size:13.5px;color:var(--ink-faint)}
+
+/* ============ COMMUNITY ============ */
+.community{padding:100px 0}
+.comm-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.comm-card{border-radius:var(--radius);padding:40px 36px;border:1px solid var(--line);background:#fff;transition:.3s}
+.comm-card:hover{box-shadow:var(--shadow);transform:translateY(-4px)}
+.comm-card.accent{background:linear-gradient(150deg,#fff8e9,#fdf0cf);border-color:#f3dca6}
+.comm-card h3{font-size:23px;margin:16px 0 12px}
+.comm-card p{font-size:15px;color:var(--ink-soft);margin-bottom:24px}
+.comm-list{display:grid;gap:12px;margin-bottom:26px}
+.comm-list li{display:flex;gap:10px;font-size:14px;color:var(--ink-soft)}
+.comm-list li::before{content:"→";color:var(--yolk-deep);font-weight:900}
+.link-more{font-size:14.5px;font-weight:800;color:var(--yolk-deep);display:inline-flex;align-items:center;gap:6px}
+.link-more:hover{gap:11px;transition:.25s}
+
+/* ============ FAQ ============ */
+.faq{padding:100px 0;background:#fff;border-block:1px solid var(--line)}
+.faq-list{max-width:840px;margin:0 auto}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-q{
+  width:100%;text-align:left;background:none;border:0;cursor:pointer;
+  padding:26px 8px;display:flex;justify-content:space-between;align-items:center;gap:20px;
+  font-size:17px;font-weight:800;color:var(--ink);font-family:inherit;
+}
+.faq-q .plus{width:30px;height:30px;flex:0 0 auto;border-radius:9px;background:var(--yolk-soft);color:var(--yolk-deep);display:grid;place-items:center;font-size:18px;transition:.3s}
+.faq-item.open .faq-q .plus{transform:rotate(45deg);background:var(--yolk);color:#fff}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease;color:var(--ink-soft);font-size:15px}
+.faq-a p{padding:0 8px 26px}
+
+/* ============ CTA ============ */
+.cta{padding:100px 0}
+.cta-box{
+  position:relative;border-radius:30px;overflow:hidden;padding:74px 56px;text-align:center;
+  background:linear-gradient(150deg,#2c2416,#4d3d1d 55%,#8a6a1f);
+  color:#fff;box-shadow:0 40px 80px -40px rgba(60,40,0,.7);
+}
+.cta-box::before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(255,206,106,.3),transparent 68%);top:-220px;left:-120px}
+.cta-box::after{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(255,206,106,.22),transparent 68%);bottom:-200px;right:-100px}
+.cta-box > *{position:relative;z-index:2}
+.cta-box h2{font-size:clamp(28px,4vw,44px);margin:20px 0 16px}
+.cta-box p{color:#e2d7c0;max-width:560px;margin:0 auto 34px;font-size:16px}
+.cta-form{display:flex;gap:10px;max-width:480px;margin:0 auto;flex-wrap:wrap;justify-content:center}
+.cta-form input{
+  flex:1;min-width:220px;padding:15px 20px;border-radius:13px;border:1px solid rgba(255,255,255,.2);
+  background:rgba(255,255,255,.1);color:#fff;font-size:15px;font-family:inherit;outline:none;
+}
+.cta-form input::placeholder{color:rgba(255,255,255,.5)}
+.cta-form input:focus{border-color:var(--yolk);background:rgba(255,255,255,.16)}
+.cta-form button{
+  padding:15px 30px;border-radius:13px;border:0;cursor:pointer;font-family:inherit;
+  background:linear-gradient(135deg,#ffd97a,var(--yolk));color:#3a2a00;font-weight:900;font-size:15px;transition:.25s;
+}
+.cta-form button:hover{transform:translateY(-2px);box-shadow:0 16px 30px -14px rgba(255,206,106,.8)}
+.cta-note{font-size:12.5px;color:#b8a988;margin-top:18px}
+.form-msg{margin-top:16px;font-size:14px;font-weight:700;color:#ffd97a;min-height:20px}
+
+/* ============ FOOTER ============ */
+footer{background:#15120d;color:#a49c8d;padding:70px 0 30px}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:44px;margin-bottom:52px}
+.foot-brand .logo{color:#fff;margin-bottom:16px}
+.foot-brand .logo small{color:#6b6455}
+.foot-brand p{font-size:14px;line-height:1.8;max-width:300px}
+.socials{display:flex;gap:10px;margin-top:22px}
+.socials a{width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,.07);display:grid;place-items:center;color:#c8c0b2;transition:.25s}
+.socials a:hover{background:var(--yolk);color:#2a2000;transform:translateY(-3px)}
+.socials svg{width:17px;height:17px}
+.foot-col h4{color:#fff;font-size:14.5px;margin-bottom:18px;letter-spacing:.02em}
+.foot-col ul{display:grid;gap:11px}
+.foot-col a{font-size:13.5px;transition:.22s}
+.foot-col a:hover{color:var(--yolk)}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.09);padding-top:26px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:12.5px}
+
+/* ============ REVEAL ============ */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* ============ RESPONSIVE ============ */
+@media(max-width:1024px){
+  .hero-grid,.story-grid{grid-template-columns:1fr;gap:48px}
+  .hero-visual{order:-1}
+  .work-grid,.val-grid{grid-template-columns:repeat(2,1fr)}
+  .cr-grid{grid-template-columns:repeat(2,1fr)}
+  .num-grid{grid-template-columns:repeat(2,1fr)}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  nav.menu{display:none}
+  .burger{display:grid}
+  .nav-cta{display:none}
+  nav.menu.open{display:flex;position:absolute;top:76px;left:0;right:0;background:#fff;flex-direction:column;padding:16px;border-bottom:1px solid var(--line);box-shadow:var(--shadow)}
+  nav.menu.open a{padding:14px 18px}
+}
+@media(max-width:680px){
+  .hero{padding:56px 0 64px}
+  .hero-stats{gap:26px}
+  .hero-stats b{font-size:24px}
+  .work-grid,.val-grid,.comm-grid,.cr-grid,.num-grid{grid-template-columns:1fr}
+  .fc1{left:-10px;top:2%}
+  .fc2{right:-8px}
+  .cta-box{padding:52px 24px}
+  .foot-grid{grid-template-columns:1fr;gap:34px}
+  .works,.story,.values,.creators,.community,.faq,.cta,.numbers{padding:70px 0}
+  .trust-inner{justify-content:center;text-align:center}
+  .partners{gap:22px;justify-content:center}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="logo">
+      <span class="logo-mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M10 8.5l6 3.5-6 3.5z" fill="currentColor" stroke="none"/></svg>
+      </span>
+      <span>溏心原创vlog<small>YOLK ORIGINAL VLOG</small></span>
+    </a>
+    <nav class="menu" id="menu">
+      <a href="#story">品牌故事</a>
+      <a href="#works">原创作品</a>
+      <a href="#creators">创作者</a>
+      <a href="#community">社区</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+    <a href="#join" class="nav-cta">
+      加入创作计划
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+    <button class="burger" id="burger" aria-label="菜单"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">原创影像 · 真实记录</span>
+        <h1>溏心原创<em>vlog</em></h1>
+        <p class="hero-sub">我们相信日常里藏着最动人的故事。溏心原创vlog 用镜头记录流动的温柔，把每一次呼吸、每一帧光影都熬成有温度的影像。</p>
+        <div class="hero-actions">
+          <a href="#works" class="btn btn-primary">
+            观看原创作品
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          </a>
+          <a href="#story" class="btn btn-ghost">了解品牌故事</a>
+        </div>
+        <div class="hero-stats">
+          <div><b>1,280+</b><span>原创影像作品</span></div>
+          <div><b>36万</b><span>社区创作者</span></div>
+          <div><b>2.4亿</b><span>累计播放量</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="phone">
+          <div class="phone-scene">
+            <div class="sun"></div>
+            <div class="hill b"></div>
+            <div class="hill"></div>
+            <div class="grain"></div>
+          </div>
+          <div class="rec"><i></i> REC · 4K</div>
+          <div class="phone-cap">
+            <p>EP. 042 / 清晨六点</p>
+            <h4>把日出装进一杯温水</h4>
+          </div>
+          <div class="phone-bar">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg>
+            <div class="track"><i></i></div>
+            <span style="font-size:11px;font-weight:700;color:#fff">04:12</span>
+          </div>
+        </div>
+        <div class="float-card fc1">
+          <div class="ic"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 20V10M6 20V4M18 20v-6"/></svg></div>
+          <div>今日新增<small>+248 条原创作品</small></div>
+        </div>
+        <div class="float-card fc2">
+          <div class="ic"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 00-7.8 7.8l1 1.1L12 21.2l7.8-7.7 1-1.1a5.5 5.5 0 000-7.8z"/></svg></div>
+          <div>社区温度<small>98.6% 好评互动</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST -->
+  <section class="trust">
+    <div class="wrap trust-inner">
+      <span class="trust-label">合作与认证伙伴</span>
+      <div class="partners">
+        <span>光影影像馆</span>
+        <span>晨间生活节</span>
+        <span>城市文旅局</span>
+        <span>创客影像联盟</span>
+        <span>慢生活研究会</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section class="story" id="story">
+    <div class="wrap story-grid">
+      <div class="story-art reveal">
+        <div class="lay"></div>
+        <div class="lines"></div>
+        <div class="lens"></div>
+        <div class="story-badge">
+          <div class="dot">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+          </div>
+          <div><b>品牌初心</b><small>让每一段真实生活被温柔记录</small></div>
+        </div>
+      </div>
+      <div class="story-text reveal">
+        <span class="eyebrow">关于溏心原创vlog</span>
+        <h2>慢一点，把生活的溏心熬出来</h2>
+        <p>溏心原创vlog 起源于一个简单的念头：在快节奏的时代里，仍然有人愿意花时间，认真记录一顿早餐、一次散步、一场没有剧本的对话。我们把镜头对准普通人，把剪辑交给耐心，把故事留给时间。</p>
+        <p>从最初的个人创作，到如今汇聚数万名创作者的原创影像社区，我们始终坚持"真实优先、温度优先、原创优先"的内容准则。每一条作品都经过创作者授权与内容审核，让真诚的表达被更多人看见。</p>
+        <ul class="story-list">
+          <li>
+            <span class="tick">✓</span>
+            <div><b>真实优先</b><span>不摆拍、不剧本化，记录生活本来的模样</span></div>
+          </li>
+          <li>
+            <span class="tick">✓</span>
+            <div><b>原创保护</b><span>所有影像均为创作者原创，平台提供版权存证</span></div>
+          </li>
+          <li>
+            <span class="tick">✓</span>
+            <div><b>社区共建</b><span>创作者自治、互相评审，共同维护内容生态</span></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORKS -->
+  <section class="works works-bg" id="works">
+    <div class="wrap">
+      <div class="works-head">
+        <div class="section-head reveal">
+          <span class="eyebrow">原创作品精选</span>
+          <h2>每一帧，都是真实发生过的</h2>
+          <p>来自溏心原创vlog 社区的最新影像，涵盖生活、旅行、手作、人物纪实等多种类型。</p>
+        </div>
+        <div class="filters reveal" id="filters">
+          <button class="active" data-f="all">全部</button>
+          <button data-f="life">生活</button>
+          <button data-f="travel">旅行</button>
+          <button data-f="craft">手作</button>
+          <button data-f="people">人物</button>
+        </div>
+      </div>
+      <div class="work-grid" id="workGrid">
+        <article class="work-card reveal" data-cat="life">
+          <div class="work-thumb wt1">
+            <span class="tag">生活纪录</span>
+            <div class="play"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+            <span class="dur">07:24</span>
+          </div>
+          <div class="work-body">
+            <h3>清晨的第六杯温水</h3>
+            <p>用一周时间记录一个早睡早起的人，如何在城市的清晨里找到属于自己的节奏。</p>
+            <div class="work-meta">
+              <span class="who"><span class="ava">林</span>林间小满</span>
+              <span class="likes"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.6-9.6-9A5.5 5.5 0 0112 5.6 5.5 5.5 0 0121.6 12c-2.1 4.4-9.6 9-9.6 9z"/></svg>2.1万</span>
+            </div>
+          </div>
+        </article>
+        <article class="work-card reveal" data-cat="travel">
+          <div class="work-thumb wt2">
+            <span class="tag">旅行影像</span>
+            <div class="play"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+            <span class="dur">12:08</span>
+          </div>
+          <div class="work-body">
+            <h3>山那边有片安静的湖</h3>
+            <p>徒步两天抵达无人湖岸，记录风、云、以及一个人坐在湖边发呆的三个小时。</p>
+            <div class="work-meta">
+              <span class="who"><span class="ava">舟</span>舟行纪事</span>
+              <span class="likes"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.6-9.6-9A5.5 5.5 0 0112 5.6 5.5 5.5 0 0121.6 12c-2.1 4.4-9.6 9-9.6 9z"/></svg>3.6万</span>
+            </div>
+          </div>
+        </article>
+        <article class="work-card reveal" data-cat="craft">
+          <div class="work-thumb wt3">
+            <span class="tag">手作过程</span>
+            <div class="play"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+            <span class="dur">09:47</span>
+          </div>
+          <div class="work-body">
+            <h3>一块陶土的七十二变</h3>
+            <p>从揉泥到上釉，完整记录一只杯子在窑火中诞生的全过程，没有快进。</p>
+            <div class="work-meta">
+              <span class="who"><span class="ava">陶</span>陶土与火</span>
+              <span class="likes"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.6-9.6-9A5.5 5.5 0 0112 5.6 5.5 5.5 0 0121.6 12c-2.1 4.4-9.6 9-9.6 9z"/></svg>1.8万</span>
+            </div>
+          </div>
+        </article>
+        <article class="work-card reveal" data-cat="people">
+          <div class="work-thumb wt4">
+            <span class="tag">人物纪实</span>
+            <div class="play"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+            <span class="dur">15:32</span>
+          </div>
+          <div class="work-body">
+            <h3>凌晨四点开摊的夫妻</h3>
+            <p>跟随一对经营早餐摊十二年的夫妻，记录他们从备料到收摊的一整天。</p>
+            <div class="work-meta">
+              <span class="who"><span class="ava">街</span>街头留声机</span>
+              <span class="likes"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.6-9.6-9A5.5 5.5 0 0112 5.6 5.5 5.5 0 0121.6 12c-2.1 4.4-9.6 9-9.6 9z"/></svg>5.2万</span>
+            </div>
+          </div>
+        </article>
+        <article class="work-card reveal" data-cat="life">
+          <div class="work-thumb wt5">
+            <span class="tag">厨房日常</span>
+            <div class="play"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+            <span class="dur">06:19</span>
+          </div>
+          <div class="work-body">
+            <h3>一个人也要好好吃饭</h3>
+            <p>三道简单家常菜的完整过程，配上窗外的雨声，是一顿晚餐的全部。</p>
+            <div class="work-meta">
+              <span class="who"><span class="ava">食</span>食光慢煮</span>
+              <span class="likes"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.6-9.6-9A5.5 5.5 0 0112 5.6 5.5 5.5 0 0121.6 12c-2.1 4.4-9.6 9-9.6 9z"/></svg>4.4万</span>
+            </div>
+          </div>
+        </article>
+        <article class="work-card reveal" data-cat="travel">
+          <div class="work-thumb wt6">
+            <span class="tag">城市漫游</span>
+            <div class="play"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+            <span class="dur">11:03</span>
+          </div>
+          <div class="work-body">
+            <h3>沿着老城墙走一下午</h3>
+            <p>没有目的的漫步，镜头跟随脚步穿过老街、巷口与树荫，直到日落。</p>
+            <div class="work-meta">
+              <span class="who"><span class="ava">漫</span>漫游手记</span>
+              <span class="likes"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.6-9.6-9A5.5 5.5 0 0112 5.6 5.5 5.5 0 0121.6 12c-2.1 4.4-9.6 9-9.6 9z"/></svg>2.9万</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- NUMBERS -->
+  <section class="numbers">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">社区数据</span>
+        <h2>真实记录，正在持续发生</h2>
+        <p>溏心原创vlog 的每一次增长，都来自创作者与观众的真诚互动。</p>
+      </div>
+      <div class="num-grid">
+        <div class="num-card reveal"><b data-count="1280">0</b><span>累计原创影像作品</span></div>
+        <div class="num-card reveal"><b data-count="36">0</b><span>社区创作者（万）</span></div>
+        <div class="num-card reveal"><b data-count="240">0</b><span>累计播放量（百万）</span></div>
+        <div class="num-card reveal"><b data-count="98">0</b><span>社区好评率（%）</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUES -->
+  <section class="values">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">我们坚持什么</span>
+        <h2>原创影像的三条底线</h2>
+        <p>在溏心原创vlog，内容质量不是数据游戏，而是每一次创作都应该被认真对待。</p>
+      </div>
+      <div class="val-grid">
+        <div class="val-card reveal">
+          <div class="val-ic">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+          </div>
+          <h3>真实影像，不造作</h3>
+          <p>反对过度摆拍与虚假场景。我们鼓励创作者放下设备，先把生活过好，再把它记录下来。</p>
+        </div>
+        <div class="val-card reveal">
+          <div class="val-ic">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4.5 8-11V5l-8-3-8 3v6c0 6.5 8 11 8 11z"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <h3>原创保护，有保障</h3>
+          <p>每条作品发布即完成版权存证，盗用与搬运零容忍。创作者权益由社区共同守护。</p>
+        </div>
+        <div class="val-card reveal">
+          <div class="val-ic">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.9M16 3.1a4 4 0 010 7.8"/></svg>
+          </div>
+          <h3>社区共建，有温度</h3>
+          <p>内容审核由创作者志愿者参与，评论区坚持友善交流，让每一次表达都被温柔对待。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREATORS -->
+  <section class="creators" id="creators">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">创作者社区</span>
+        <h2>把镜头交给认真生活的人</h2>
+        <p>他们来自不同城市、不同职业，却同样相信影像可以留住时间的温度。</p>
+      </div>
+      <div class="cr-grid">
+        <div class="cr-card reveal">
+          <div class="cr-ava ca1">林</div>
+          <h3>林间小满</h3>
+          <div class="role">生活纪录 / 城市</div>
+          <p>用镜头记录清晨与黄昏，擅长把平凡日常拍出呼吸感。</p>
+        </div>
+        <div class="cr-card reveal">
+          <div class="cr-ava ca2">舟</div>
+          <h3>舟行纪事</h3>
+          <div class="role">旅行影像 / 自然</div>
+          <p>常年在山野间行走，作品以长镜头与自然声著称。</p>
+        </div>
+        <div class="cr-card reveal">
+          <div class="cr-ava ca3">陶</div>
+          <h3>陶土与火</h3>
+          <div class="role">手作过程 / 器物</div>
+          <p>完整记录手作工艺，让观众看见一件器物诞生的全流程。</p>
+        </div>
+        <div class="cr-card reveal">
+          <div class="cr-ava ca4">街</div>
+          <h3>街头留声机</h3>
+          <div class="role">人物纪实 / 访谈</div>
+          <p>专注于普通人的人物故事，用对话抵达真实的生活现场。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMUNITY -->
+  <section class="community" id="community">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">参与社区</span>
+        <h2>你可以这样加入溏心原创vlog</h2>
+        <p>无论你是创作者还是观众，这里都有属于你的位置。</p>
+      </div>
+      <div class="comm-grid">
+        <div class="comm-card accent reveal">
+          <span class="eyebrow">创作者通道</span>
+          <h3>发布你的原创影像</h3>
+          <p>上传作品，通过社区评审后即可进入精选池，获得流量扶持与版权存证服务。</p>
+          <ul class="comm-list">
+            <li>作品发布即完成版权存证</li>
+            <li>社区评审团共同把关内容质量</li>
+            <li>入选精选可获得首页推荐资源</li>
+          </ul>
+          <a href="#join" class="link-more">申请成为创作者 →</a>
+        </div>
+        <div class="comm-card reveal">
+          <span class="eyebrow">观众通道</span>
+          <h3>成为社区的温度来源</h3>
+          <p>观看、点赞、留言、投稿选题，你的每一次互动都在帮助好内容被更多人看见。</p>
+          <ul class="comm-list">
+            <li>参与月度主题征集与共创</li>
+            <li>给喜欢的作品留言与打分</li>
+            <li>推荐你身边值得记录的人和事</li>
+          </ul>
+          <a href="#join" class="link-more">加入社区活动 →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="wrap">
+      <div class="section-head reveal" style="margin-inline:auto;text-align:center">
+        <span class="eyebrow">常见问题</span>
+        <h2>关于溏心原创vlog</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item reveal">
+          <button class="faq-q">溏心原创vlog 是什么？<span class="plus">+</span></button>
+          <div class="faq-a"><p>溏心原创vlog 是一个专注真实生活记录的原创影像品牌与社区。我们汇聚创作者，发布生活、旅行、手作、人物纪实等类型的原创视频，并提供版权存证、内容评审与社区共创等服务。</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q">如何成为平台的原创创作者？<span class="plus">+</span></button>
+          <div class="faq-a"><p>在本页底部的加入表单留下联系方式，我们会在一周内与你联系。通过基础审核后，你即可发布作品，并参与社区评审与月度主题共创。</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q">平台对作品内容有什么要求？<span class="plus">+</span></button>
+          <div class="faq-a"><p>我们坚持真实、原创、有温度的内容准则。作品需为创作者本人拍摄与剪辑，不得搬运他人内容；不接受过度摆拍与虚假场景；涉及他人的出镜需获得授权。</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q">作品的版权归属如何界定？<span class="plus">+</span></button>
+          <div class="faq-a"><p>作品版权始终归创作者所有。发布时平台会为作品完成版权存证，用于后续维权证明。平台仅在获得授权的前提下进行推荐与展示。</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q">社区活动多久举办一次？<span class="plus">+</span></button>
+          <div class="faq-a"><p>社区每月推出一个主题征集，每季度举办一次线下放映与创作者见面会。具体安排会通过站内公告与邮件通知发布。</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" id="join">
+    <div class="wrap">
+      <div class="cta-box reveal">
+        <span class="eyebrow" style="background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.24);color:#ffd97a">加入创作计划</span>
+        <h2>现在，开始记录你的生活</h2>
+        <p>留下邮箱，我们会把创作者手册、拍摄指南与本月主题征集发送给你。每一个认真生活的人，都值得被镜头温柔以待。</p>
+        <form class="cta-form" id="joinForm">
+          <input type="email" id="email" placeholder="请输入你的邮箱地址" required>
+          <button type="submit">立即加入</button>
+        </form>
+        <div class="form-msg" id="formMsg"></div>
+        <p class="cta-note">我们尊重你的隐私，邮箱仅用于发送创作者相关通知，可随时退订。</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="#top" class="logo">
+          <span class="logo-mark">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M10 8.5l6 3.5-6 3.5z" fill="currentColor" stroke="none"/></svg>
+          </span>
+          <span>溏心原创vlog<small>YOLK ORIGINAL VLOG</small></span>
+        </a>
+        <p>专注真实生活记录的原创影像品牌。让每一段平凡的日子，都能被温柔地保存下来。</p>
+        <div class="socials">
+          <a href="#top" aria-label="微博"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M10 20c-4 0-7-2-7-4.5 0-1.4 1-3 2.8-4.4C7.6 9.7 9.8 9 11 9c.4 0 .7 0 1 .1.3-.9 1.2-2.6 2.9-3.6C17 4.4 19 5 19.6 6.3c.3.6.3 1.3 0 2 1.1.4 2.1 1.4 2.1 3 0 .9-.4 1.8-1 2.6-.6.8-1.4 1.4-2.3 1.8C16.5 18.4 13.4 20 10 20z"/></svg></a>
+          <a href="#top" aria-label="视频号"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="15" height="12" rx="2"/><path d="M17 8l5-3v11l-5-3z"/></svg></a>
+          <a href="#top" aria-label="播客"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3a4 4 0 014 4v5a4 4 0 11-8 0V7a4 4 0 014-4zM5 11a7 7 0 0014 0M12 18v3"/></svg></a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h4>探索品牌</h4>
+        <ul>
+          <li><a href="#story">品牌故事</a></li>
+          <li><a href="#works">原创作品</a></li>
+          <li><a href="#creators">创作者社区</a></li>
+          <li><a href="#community">社区活动</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>参与创作</h4>
+        <ul>
+          <li><a href="#join">创作者申请</a></li>
+          <li><a href="#faq">内容准则</a></li>
+          <li><a href="#faq">版权保护</a></li>
+          <li><a href="#join">主题征集</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>联系与支持</h4>
+        <ul>
+          <li><a href="#faq">常见问题</a></li>
+          <li><a href="#join">合作洽谈</a></li>
+          <li><a href="#join">媒体联络</a></li>
+          <li><a href="#top">隐私政策</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2024 溏心原创vlog 影像品牌 · 保留所有权利</span>
+      <span>真实记录 · 原创优先 · 社区共建</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  /* nav shadow */
+  var nav = document.getElementById('nav');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 12){ nav.classList.add('scrolled'); }
+    else{ nav.classList.remove('scrolled'); }
+  });
+
+  /* burger */
+  var burger = document.getElementById('burger');
+  var menu = document.getElementById('menu');
+  burger.addEventListener('click', function(){
+    menu.classList.toggle('open');
+  });
+  menu.addEventListener('click', function(e){
+    if(e.target.tagName === 'A'){ menu.classList.remove('open'); }
+  });
+
+  /* reveal on scroll */
+  var reveals = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          en.target.classList.add('in');
+          io.unobserve(en.target);
+        }
+      });
+    }, {threshold:0.12, rootMargin:'0px 0px -40px 0px'});
+    reveals.forEach(function(el){ io.observe(el); });
+  } else {
+    reveals.forEach(function(el){ el.classList.add('in'); });
+  }
+
+  /* works filter */
+  var filterWrap = document.getElementById('filters');
+  var cards = document.querySelectorAll('#workGrid .work-card');
+  filterWrap.addEventListener('click', function(e){
+    var btn = e.target.closest('button');
+    if(!btn) return;
+    filterWrap.querySelectorAll('button').forEach(function(b){ b.classList.remove('active'); });
+    btn.classList.add('active');
+    var f = btn.getAttribute('data-f');
+    cards.forEach(function(c){
+      var show = (f === 'all' || c.getAttribute('data-cat') === f);
+      c.style.display = show ? 'flex' : 'none';
+    });
+  });
+
+  /* count up */
+  var counted = false;
+  var numSection = document.querySelector('.numbers');
+  function countUp(){
+    if(counted) return;
+    counted = true;
+    document.querySelectorAll('[data-count]').forEach(function(el){
+      var target = parseInt(el.getAttribute('data-count'), 10);
+      var start = 0;
+      var dur = 1400;
+      var t0 = null;
+      function step(ts){
+        if(!t0) t0 = ts;
+        var p = Math.min((ts - t0) / dur, 1);
+        var eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.floor(start + (target - start) * eased);
+        if(p < 1) requestAnimationFrame(step);
+        else el.textContent = target;
+      }
+      requestAnimationFrame(step);
+    });
+  }
+  if('IntersectionObserver' in window && numSection){
+    var io2 = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ countUp(); io2.disconnect(); } });
+    }, {threshold:0.3});
+    io2.observe(numSection);
+  } else {
+    countUp();
+  }
+
+  /* faq */
+  document.querySelectorAll('.faq-item').forEach(function(item){
+    var q = item.querySelector('.faq-q');
+    var a = item.querySelector('.faq-a');
+    q.addEventListener('click', function(){
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function(it){
+        it.classList.remove('open');
+        it.querySelector('.faq-a').style.maxHeight = null;
+      });
+      if(!isOpen){
+        item.classList.add('open');
+        a.style.maxHeight = a.scrollHeight + 'px';
+      }
+    });
+  });
+
+  /* form */
+  var form = document.getElementById('joinForm');
+  var msg = document.getElementById('formMsg');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var email = document.getElementById('email').value.trim();
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+      msg.style.color = '#ffb4a2';
+      msg.textContent = '请输入有效的邮箱地址。';
+      return;
+    }
+    msg.style.color = '#ffd97a';
+    msg.textContent = '提交成功！创作者手册将在 24 小时内发送至 ' + email;
+    form.reset();
+  });
+})();
+</script>
+
+</body>
+          </html>
